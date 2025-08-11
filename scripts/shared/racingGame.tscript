@@ -416,8 +416,8 @@ function racingGame::onPostSpawn(%this, %client)
    if (%client.player.isMethod("setShapeName"))
       %client.player.setShapeName(%client.playerName);
       
-   %client.getEventManager().postEvent("postSpawnComplete");
    %this.spawnFollowCam(%client);
+   %client.getEventManager().postEvent("postSpawnComplete",%client);
 }
 
 
